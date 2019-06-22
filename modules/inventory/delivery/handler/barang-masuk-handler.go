@@ -17,6 +17,7 @@ func (dependencyInjection *DatabaseInjection) GetAllBarangMasuk(ctx *gin.Context
 
 	if barangMasukResultFromService != nil {
 		ctx.JSON(200, gin.H{
+			"count": len(barangMasukResultFromService),
 			"total": len(barangMasukResultFromService),
 			"data":  barangMasukResultFromService,
 		})
@@ -26,4 +27,24 @@ func (dependencyInjection *DatabaseInjection) GetAllBarangMasuk(ctx *gin.Context
 		})
 	}
 
+}
+
+func (dependencyInjection *DatabaseInjection) GetDetailBarangMasuk(ctx *gin.Context) {
+	IDBarangMasuk := ctx.Param("IDBarangMasuk")
+
+	barangMasukDetailResultService, errorHandlerService := service.FetchDetailBarangMasuk(IDBarangMasuk, dependencyInjection.DB)
+
+	if errorHandlerService != nil {
+		log.Fatalf("Error exception %v", errorHandlerService)
+	}
+
+	if barangMasukDetailResultService != nil {
+		ctx.JSON(200, gin.H{
+			"data": barangMasukDetailResultService,
+		})
+	} else {
+		ctx.JSON(200, gin.H{
+			"message": "Data barang masuk kosong",
+		})
+	}
 }

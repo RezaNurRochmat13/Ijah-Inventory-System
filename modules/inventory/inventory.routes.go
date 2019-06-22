@@ -18,5 +18,6 @@ func InventoryRoutes(routes *gin.Engine) {
 	inventoryRouteConfiguration := routes.Group("/public/api/v1")
 	{
 		inventoryRouteConfiguration.GET("product-income", dependencyInjection.GetAllBarangMasuk)
+		inventoryRouteConfiguration.GET("product-income/:IDBarangMasuk", dependencyInjection.GetDetailBarangMasuk)
 	}
 }

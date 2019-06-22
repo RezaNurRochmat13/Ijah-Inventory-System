@@ -39,3 +39,43 @@ func FetchAllBarangMasukService(database *sql.DB) ([]model.ListBarangMasuk, erro
 
 	return resultAllBarangMasuk, nil
 }
+
+func FetchDetailBarangMasuk(barangMasukId string, database *sql.DB) ([]model.DetailBarangMasuk, error) {
+	var (
+		modelDetailBarangMasuk  model.DetailBarangMasuk
+		resultdetailBarangMasuk []model.DetailBarangMasuk
+	)
+
+	barangMasukDetailRepository := repository.FindBarangMasukById()
+
+	queryDetailBarangMasuk, errorHandlerQuery := database.Query(barangMasukDetailRepository, barangMasukId)
+
+	if errorHandlerQuery != nil {
+		log.Fatalf("Error query exception %v", errorHandlerQuery.Error())
+	}
+
+	for queryDetailBarangMasuk.Next() {
+		errorHandlerScanData := queryDetailBarangMasuk.Scan(
+			&modelDetailBarangMasuk.IDBarangMasuk,
+			&modelDetailBarangMasuk.NamaBarang,
+			&modelDetailBarangMasuk.NamaUkuran,
+			&modelDetailBarangMasuk.NamaWarna,
+			&modelDetailBarangMasuk.TanggalMasuk,
+			&modelDetailBarangMasuk.HargaBeli,
+			&modelDetailBarangMasuk.JumlahPesan,
+			&modelDetailBarangMasuk.JumlahDiterima,
+			&modelDetailBarangMasuk.TotalHargaBeli,
+			&modelDetailBarangMasuk.NoKwitansi,
+			&modelDetailBarangMasuk.Keterangan)
+
+		if errorHandlerScanData != nil {
+			log.Fatalf("Error query exception %v", errorHandlerScanData.Error())
+		}
+
+		resultdetailBarangMasuk = append(resultdetailBarangMasuk, modelDetailBarangMasuk)
+
+	}
+
+	return resultdetailBarangMasuk, nil
+
+}
