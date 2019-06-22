@@ -1,9 +1,29 @@
 package handler
 
-import "github.com/gin-gonic/gin"
+import (
+	"log"
+	"svc-inventory-go/modules/inventory/service"
 
-func GetAllStock(ctx *gin.Context) {
-	ctx.JSON(200, gin.H{
-		"data": "All stock product",
-	})
+	"github.com/gin-gonic/gin"
+)
+
+func (dependencyInjection *DatabaseInjection) GetAllBarangMasuk(ctx *gin.Context) {
+
+	barangMasukResultFromService, errorHandlerService := service.FetchAllBarangMasukService(dependencyInjection.DB)
+
+	if errorHandlerService != nil {
+		log.Fatalf("Error exception %v", errorHandlerService)
+	}
+
+	if barangMasukResultFromService != nil {
+		ctx.JSON(200, gin.H{
+			"total": len(barangMasukResultFromService),
+			"data":  barangMasukResultFromService,
+		})
+	} else {
+		ctx.JSON(200, gin.H{
+			"message": "Data barang masuk kosong",
+		})
+	}
+
 }

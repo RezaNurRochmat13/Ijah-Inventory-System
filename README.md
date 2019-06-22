@@ -36,7 +36,7 @@ List of all core technologies used to build this app/service along with their fu
 - [Gin Gonic](https://github.com/gin-gonic/gin) - HTTP Routing Framework for Golang [v1.3.0]
 - [Dep Package Management](https://github.com/golang/dep) - Dep Package Management For Golang [v0.5.1]
 - [Viper Configuration Tools](https://github.com/spf13/viper) - Viper Configuration Tools [v1.3.2]
-- [Go SQL Driver](https://github.com/go-sql-driver/mysql) - SQL Driver For MySQL DB [v1.4.1]
+- [Go SQL Driver](github.com/mattn/go-sqlite3) - SQL Driver For SQLite DB [v1.4.1]
 - [Assert Unit Testing](https://github.com/stretchr/testify) - Assert Testify Unit Test Tools [v1.3.0]
 - [Docker](https://www.docker.com/) - Container Environment For Running Services [v18.09.6]
 

@@ -1,0 +1,4 @@
+[sqlite]
+
+DriverDB = "sqlite3"
+DBName = "ijah"
