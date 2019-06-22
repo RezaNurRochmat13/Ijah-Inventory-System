@@ -1,1 +1,5 @@
-[GIN] 2019/06/22 - 21:17:30 | 200 |     541.211µs |       127.0.0.1 | GET      /public/api/v1/product-income/d34c2454-e854-4626-aa43-3a9909ed2a4c
+[GIN] 2019/06/22 - 23:07:05 | 200 |     435.298µs |       127.0.0.1 | GET      /public/api/v1/product-out
+[GIN] 2019/06/22 - 23:07:10 | 200 |     190.994µs |       127.0.0.1 | GET      /public/api/v1/product-income
+[GIN] 2019/06/22 - 23:07:10 | 200 |     153.236µs |       127.0.0.1 | GET      /public/api/v1/product-income
+[GIN] 2019/06/22 - 23:07:15 | 200 |     115.679µs |       127.0.0.1 | GET      /public/api/v1/product-out
+[GIN] 2019/06/22 - 23:07:25 | 200 |     129.929µs |       127.0.0.1 | GET      /public/api/v1/product-out

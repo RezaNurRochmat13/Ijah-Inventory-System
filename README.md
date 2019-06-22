@@ -17,16 +17,20 @@ List of all readme contents:
 
 List of all features/functionalities handled by this app/service:
 
- - Key feature A
-   - Sub feature A1
-   - Sub feature A2
-   - Sub feature A3
- - Key feature B
-   - Sub feature B1
-   - Sub feature B2
- - Key feature C
- - Key feature D
- - Key feature E
+ - Report Barang Masuk 
+   - Retrieve All Barang Masuk
+   - Retrieve Detail Barang Masuk
+ - Report Barang Keluar
+   - Retrieve All Barang Keluar
+   - Retrieve Detail Barang Keluar
+ - Report Penjualan
+   - Retrieve All Penjualan
+   - Retrieve Detail Penjualan
+ - Report Stok Barang
+   - Retrieve All Stok Barang
+ - Report Value Barang
+   - Retrieve All Value Barang 
+ - Generate Report to CSV Format 
 
 ## Built With
 List of all core technologies used to build this app/service along with their functions, versions (if any), and link to their online pages, grouped based on development stack:
