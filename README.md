@@ -1,6 +1,6 @@
-# Research Modular Architecture Using Golang
+# Service Inventory Go
 
-This project is example research for how building modular architecture in Golang. 
+This project is example service inventory management system written in Golang.
 
 ## Table of Contents
 
@@ -34,11 +34,11 @@ List of all core technologies used to build this app/service along with their fu
 ### Backend
 - [Golang](https://golang.org/) - Programming Language [v1.12.4]
 - [Gin Gonic](https://github.com/gin-gonic/gin) - HTTP Routing Framework for Golang [v1.3.0]
-- [Echo](https://github.com/labstack/echo) - HTTP Routing Framework for Golang [v4.0.0]
 - [Dep Package Management](https://github.com/golang/dep) - Dep Package Management For Golang [v0.5.1]
 - [Viper Configuration Tools](https://github.com/spf13/viper) - Viper Configuration Tools [v1.3.2]
 - [Go SQL Driver](https://github.com/go-sql-driver/mysql) - SQL Driver For MySQL DB [v1.4.1]
 - [Assert Unit Testing](https://github.com/stretchr/testify) - Assert Testify Unit Test Tools [v1.3.0]
+- [Docker](https://www.docker.com/) - Container Environment For Running Services [v18.09.6]
 
 ### Frontend
 - [Angular](https://angular.io/) - JS Framework [v.7.0.0]
@@ -48,32 +48,11 @@ List of all core technologies used to build this app/service along with their fu
 - For Running All Test, run command go test
 
 ### Database
-- [MySQL](https://www.percona.com/) - Core Database [v5.7]
+- [SQLite 3](https://www.sqlite.org/index.html) - Core Database [v3]
 
 ## Deployment
 
 List all required steps to deploy this app/service in server, like environment variables, server requirements, amount of compute resources (CPU, RAM), and dependency services that will communicate with this app/service.
-
-### Environment Variables
-
-**MySQL Config:**
-
-- `MYSQL_DATABASE` Name of the database using MySQL.
-- `MYSQL_USER` Username for the database using MySQL.
-- `MYSQL_PASSWORD` Password for the database using MySQL.
-- `MYSQL_HOST` Hostname of the database server using MySQL.
-
-**Dependency Services Config:**
-
-- `USER_SERVICE` FQDN of User Service.
-- `STUDENT_SERVICE` FQDN of Student Service.
-- `NOTIF_SERVICE` FQDN of Notification Service.
-- `LOGGING_SERVICE` FQDN of Logging Service.
-
-**Other Config:**
-
-- `LOG_LEVEL` Log level of the service. Accepted values: `debug`, `info`, or `notice`.
-- `JWT_SECRET` The key that will be used to sign JSON Web Token.
 
 ## API Reference
 
@@ -99,9 +78,4 @@ List of all released versions of this app/service along with their version logs,
 ## Authors
 List of all people working on this app/service along with their respective roles & contact emails:
 
-- [Dian Sigit Prastowo](mailto:bruce.wayne@uii.ac.id) - Project Manager (Team Leader)
-- [Manggala Pramuditya W](mailto:billy.batson@uii.ac.id) - DevOps and Backend Engineer
-- [Ahmad Haris Fahmy](mailto:diana.prince@uii.ac.id) - Backend Engineer
-- [Reja Nur Rochmat](mailto:hal.jordan@uii.ac.id) - Frontend and Backend Engineer
-- [Rofi Abul Hasani](mailto:barry.allen@uii.ac.id) - UI/UX and Frontend Developer
-- [Maghfirah Suyuthi](mailto:clark.kent@uii.ac.id) - Frontend Developer
+- [Reja Nur Rochmat](mailto:rezanur@uii.ac.id) - Software Engineer
