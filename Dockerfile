@@ -4,6 +4,8 @@ COPY log log
 
 COPY environment environment
 
+COPY ijah ijah
+
 RUN apk add --no-cache bash
 
 ADD main /
