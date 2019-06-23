@@ -57,8 +57,16 @@ List of all core technologies used to build this app/service along with their fu
 
 List all required steps to deploy this app/service in server, like environment variables, server requirements, amount of compute resources (CPU, RAM), and dependency services that will communicate with this app/service.
 
-- Running Application Using Docker
-- Running Application in Debugging Mode
+### Running Application Using Docker
+Before building and ship your application in Docker, follow this steps below
+  - Compile your application to binary code using shell script in manifest. Running command sh manifest/compile.sh
+  - After compiling, running command sudo docker build -t $IMAGES_NAME:$TAGS .
+  - After successfully building your apps in Docker, we can run command sudo docker --rm -it -p $PORTS:$PORTS $IMAGES_NAME
+  - Try to access your endpoints
+  
+### Running Application in Debugging Mode
+For running in debugging mode, running shell script in manifest folder using command sh manifest/run_locally.sh in your terminal.
+
 
 ## API Reference
 
