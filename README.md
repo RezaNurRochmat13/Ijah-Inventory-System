@@ -32,6 +32,8 @@ List of all features/functionalities handled by this app/service:
    - Retrieve All Value Barang 
  - Generate Report to CSV Format (For Generating CSV, sample availaible in Frontend) 
 
+ - Frontend Repository `https://github.com/RezaNurRochmat13/Ijah-Inventory-System-Frontend.git`
+
 ## Built With
 List of all core technologies used to build this app/service along with their functions, versions (if any), and link to their online pages, grouped based on development stack:
 
