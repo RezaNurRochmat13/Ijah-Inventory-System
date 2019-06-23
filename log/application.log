@@ -1,5 +1,2 @@
-[GIN] 2019/06/22 - 23:07:05 | 200 |     435.298µs |       127.0.0.1 | GET      /public/api/v1/product-out
-[GIN] 2019/06/22 - 23:07:10 | 200 |     190.994µs |       127.0.0.1 | GET      /public/api/v1/product-income
-[GIN] 2019/06/22 - 23:07:10 | 200 |     153.236µs |       127.0.0.1 | GET      /public/api/v1/product-income
-[GIN] 2019/06/22 - 23:07:15 | 200 |     115.679µs |       127.0.0.1 | GET      /public/api/v1/product-out
-[GIN] 2019/06/22 - 23:07:25 | 200 |     129.929µs |       127.0.0.1 | GET      /public/api/v1/product-out
+[GIN] 2019/06/23 - 15:05:33 | 200 |     389.032µs |       127.0.0.1 | GET      /public/api/v1/product-out
+[GIN] 2019/06/23 - 15:05:47 | 200 |     237.696µs |       127.0.0.1 | GET      /public/api/v1/product-out/de1f8d99-141a-4e46-9c36-5cab9a3f74fb

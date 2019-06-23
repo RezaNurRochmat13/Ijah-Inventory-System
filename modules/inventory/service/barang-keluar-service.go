@@ -31,9 +31,9 @@ func FetchAllBarangKeluar(database *sql.DB) ([]model.ListBarangKeluar, error) {
 
 		if errorHandlerScanData != nil {
 			log.Fatalf("Error query exception %v", errorHandlerScanData.Error())
-
-			resultAllBarangKeluar = append(resultAllBarangKeluar, modelListBarangKeluar)
 		}
+
+		resultAllBarangKeluar = append(resultAllBarangKeluar, modelListBarangKeluar)
 	}
 	return resultAllBarangKeluar, nil
 
