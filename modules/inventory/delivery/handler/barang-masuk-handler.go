@@ -12,7 +12,7 @@ func (dependencyInjection *DatabaseInjection) GetAllBarangMasuk(ctx *gin.Context
 	barangMasukResultFromService, errorHandlerService := service.FetchAllBarangMasukService(dependencyInjection.DB)
 
 	if errorHandlerService != nil {
-		log.Fatalf("Error exception %v", errorHandlerService)
+		log.Printf("Error exception %v", errorHandlerService)
 	}
 
 	if barangMasukResultFromService != nil {
@@ -35,7 +35,7 @@ func (dependencyInjection *DatabaseInjection) GetDetailBarangMasuk(ctx *gin.Cont
 	barangMasukDetailResultService, errorHandlerService := service.FetchDetailBarangMasuk(IDBarangMasuk, dependencyInjection.DB)
 
 	if errorHandlerService != nil {
-		log.Fatalf("Error exception %v", errorHandlerService)
+		log.Printf("Error exception %v", errorHandlerService)
 	}
 
 	if barangMasukDetailResultService != nil {

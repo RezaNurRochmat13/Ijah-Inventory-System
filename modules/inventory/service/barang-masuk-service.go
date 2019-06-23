@@ -19,7 +19,7 @@ func FetchAllBarangMasukService(database *sql.DB) ([]model.ListBarangMasuk, erro
 	queryAllBarangMasuk, errorHandlerQuery := database.Query(barangMasukRepository)
 
 	if errorHandlerQuery != nil {
-		log.Fatalf("Error query exception %v", errorHandlerQuery.Error())
+		log.Printf("Error query exception %v", errorHandlerQuery.Error())
 	}
 
 	for queryAllBarangMasuk.Next() {
@@ -31,7 +31,7 @@ func FetchAllBarangMasukService(database *sql.DB) ([]model.ListBarangMasuk, erro
 			&modelListBarangMasuk.TanggalMasuk)
 
 		if errorHandlerScanData != nil {
-			log.Fatalf("Error query exception %v", errorHandlerScanData.Error())
+			log.Printf("Error query exception %v", errorHandlerScanData.Error())
 		}
 
 		resultAllBarangMasuk = append(resultAllBarangMasuk, modelListBarangMasuk)
@@ -51,7 +51,7 @@ func FetchDetailBarangMasuk(barangMasukId string, database *sql.DB) ([]model.Det
 	queryDetailBarangMasuk, errorHandlerQuery := database.Query(barangMasukDetailRepository, barangMasukId)
 
 	if errorHandlerQuery != nil {
-		log.Fatalf("Error query exception %v", errorHandlerQuery.Error())
+		log.Printf("Error query exception %v", errorHandlerQuery.Error())
 	}
 
 	for queryDetailBarangMasuk.Next() {
@@ -69,7 +69,7 @@ func FetchDetailBarangMasuk(barangMasukId string, database *sql.DB) ([]model.Det
 			&modelDetailBarangMasuk.Keterangan)
 
 		if errorHandlerScanData != nil {
-			log.Fatalf("Error query exception %v", errorHandlerScanData.Error())
+			log.Printf("Error query exception %v", errorHandlerScanData.Error())
 		}
 
 		resultdetailBarangMasuk = append(resultdetailBarangMasuk, modelDetailBarangMasuk)

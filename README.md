@@ -30,7 +30,7 @@ List of all features/functionalities handled by this app/service:
    - Retrieve All Stok Barang
  - Report Value Barang
    - Retrieve All Value Barang 
- - Generate Report to CSV Format 
+ - Generate Report to CSV Format (For Generating CSV, sample availaible in Frontend) 
 
 ## Built With
 List of all core technologies used to build this app/service along with their functions, versions (if any), and link to their online pages, grouped based on development stack:
@@ -57,6 +57,9 @@ List of all core technologies used to build this app/service along with their fu
 ## Deployment
 
 List all required steps to deploy this app/service in server, like environment variables, server requirements, amount of compute resources (CPU, RAM), and dependency services that will communicate with this app/service.
+
+- Running Application Using Docker
+- Running Application in Debugging Mode
 
 ## API Reference
 
