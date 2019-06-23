@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	inventoryModulesConfiguration "svc-inventory-go/modules/inventory"
+	"svc-inventory-go/utils"
 
 	"github.com/gin-gonic/gin"
 )
@@ -24,6 +25,7 @@ func SetupRootRoutesApplication() {
 	gin.DefaultWriter = io.MultiWriter(createLogFiles, os.Stdout)
 
 	rootRoutesApplicationConfiguration := gin.Default()
+	rootRoutesApplicationConfiguration.Use(utils.CorsMiddleware())
 
 	inventoryModulesConfiguration.InventoryRoutes(rootRoutesApplicationConfiguration)
 
