@@ -74,6 +74,8 @@ For running in debugging mode, running shell script in manifest folder using com
 
 Depending on the size of this app/service APIs, if it is small and simple enough the reference docs can be added to this README. For medium to larger app/service please use Gitlab wiki or provide a link to where the API reference docs live.
 
+For API Docs, using Google Docs https://docs.google.com/document/d/1XdxDOrk2CgvJaTId4g_4Jy7t4rcUf0Ig2rItvai8XoI/edit?usp=sharing
+
 ## Release History
 
 List of all released versions of this app/service along with their version logs, sorted from newest to oldest:
