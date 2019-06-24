@@ -23,5 +23,6 @@ func InventoryRoutes(routes *gin.Engine) {
 		inventoryRouteConfiguration.GET("product-out/:IDBarangKeluar", dependencyInjection.GetDetailBarangKeluar)
 		inventoryRouteConfiguration.GET("selling-report", dependencyInjection.GetAllPenjualan)
 		inventoryRouteConfiguration.GET("stock-product", dependencyInjection.GetAllStokBarang)
+		inventoryRouteConfiguration.GET("value-product", dependencyInjection.GetTotalLaba)
 	}
 }
